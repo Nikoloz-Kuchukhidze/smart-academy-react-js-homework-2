@@ -1,13 +1,17 @@
+import Image from "next/image";
 import styles from "./ProductItem.module.css";
 
 export default function ProductItem({ product }) {
   return (
     <article className={styles.card}>
       <div className={styles.imageContainer}>
-        <img
+        <Image
           className={styles.image}
           src={product.image}
           alt={product.title}
+          width={200}
+          height={180}
+          unoptimized
           loading="lazy"
         />
       </div>
